@@ -26,6 +26,15 @@ const Formulario = () => {
             setNombreU('')
             setApellidoU('')
 
+            if (!nombreU.trim() || /^\s+$/.test(nombreU)) {
+                alert('Ingrese Nombre')
+
+                return
+            }
+            if (!apelldoU.trim() || /^\s+$/.test(apelldoU)) {
+                alert('Ingrese Apellido')
+                return
+            }
         } catch (error) {
             console.log(error)
         }
